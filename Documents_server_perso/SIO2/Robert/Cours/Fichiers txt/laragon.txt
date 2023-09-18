@@ -1,0 +1,33 @@
+EDC E6
+
+- SQL LMD : BI (data science), AI, IA
+- SQL Sécurité (user) : utilisateurs, données
+- SQL "Avancé" : Procédures stockées
+
+Objectifs
+
+1) Prise en main de SQL Server
+
+2) Rappels de SQL -> refractoring
+
+Laragon - logiciel windows | server web http - apache
+                           | git
+                           | php
+                           | bdd ] mysql, client heidi
+
+
+DML : Manipulation
+
+      SELECT -> fonctions
+        FROM
+
+
+
+
+
+
+
+
+
+
+

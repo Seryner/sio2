@@ -1,0 +1,40 @@
+back end : bdd, serveur d'app
+front end : navigateur web (html, css, js), appli mobile / desktop
+
+fw php : symphony, laravel
+fw java : JavaFx -> client
+		 Spring/Springbut
+		 Android, Kotlin
+
+fw php & java : pages web
+
+fw js : node js
+
+fw -> librairies & packages (fichiers, classes)
+
+Java : maven et gradle
+PHP : composer (composer.json)
+Javascript : npm (package.json)
+node package manager
+
+nouveau projet : utiliser des librairies qui deviennent des dépendances
+
+Jetbrains Tchèque
+*Android Studio
+*Kotlin - JVM  |  codage plus simple
+	       |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

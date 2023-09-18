@@ -1,0 +1,16 @@
+Diagramme Classe :
+
+1. Communiquer le contenu de l'application à la MoA et aux métiers. METIER
+
+2. Développer et faire évoluer une application informatique. CODE
+
+3. Persister des données dans une base de données. DATA
+
+
+Association :
+
+Lien entre 2 (ou plus) entités
+
+caractérisé : 
+		- 2 multiplicités : chaque multiplicité est un couple de valeur min et max
+			min : au minimum, cb de fois participe

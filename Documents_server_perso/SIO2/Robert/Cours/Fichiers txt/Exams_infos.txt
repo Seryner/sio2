@@ -1,0 +1,17 @@
+E5 - CCF               | 3 à 6
+
+2 situations pro       | 2 express besoins] 40 min spécification
+					  ] 20 min entretien
+					  ] 1h redistribution
+					  ] 20 min recette
+
+E6 - Cybersécurité EDC | Authentification ] Autorisations | SQL  DDL
+                       | Session          ]               | 4pts UML
+		       | Injections       | SQL
+                       | CSRF
+                       | XSS
+
+E4 - Support & mise à dispo de services info
+
+
+

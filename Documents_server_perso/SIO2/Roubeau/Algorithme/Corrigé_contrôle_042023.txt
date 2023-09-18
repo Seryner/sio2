@@ -1,0 +1,253 @@
+CORRIGE CONTROLE BLOC 2 - AVRIL 2023
+
+
+Exercice 1 : Equation du second degré
+
+Algorithme "Second degré"
+
+Variables : numériques : a, b, c, discriminant, racine_unique
+
+Début
+	Afficher "Veuillez saisir a, b et c"
+	Saisir a, b, c
+
+	discriminant <- (b*b) - 4 * a * c
+	Si discriminant = 0 Alors racine_unique <- RacineUnique(a, b)
+			  	Afficher "La fonction admet une solution unique x =", racine_unique
+		   	    Sinon Si discriminant < 0 Alors Afficher "La fonction n'a pas de soluton"
+					      	      Sinon Racines(a, b, discriminant)
+				  FSI
+        FSI
+FIN
+
+-----------------------
+
+Fonction RacineUnique (numérique aBIS, numérique bBIS) : numérique
+
+Variables locales : x
+
+Début
+	x <- (-bBIS / aBIS)
+	Retourner x
+Fin
+
+Procédure Racines(numérique aBIS, numérique bBIS, numérique discBIS)
+
+Variables locales : x1, x2
+
+Début
+	Afficher "La fonction admet 2 solutions avec"
+	x1 <- (-bBIS + racinecarrée(discBIS)) / 2 * aBIS
+	x2 <- (-bBIS - racinecarrée(discBIS)) / 2 * aBIS
+	Afficher "x1 = ", x1, " et x2 = ", x2
+Fin 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exercice 2 : Carré de nombres 
+
+Algorithme "Carré de nombres"
+
+Variables indicées : tab[N] d'éléments numériques
+	  numériques : N, I, nombre
+Début
+
+	Afficher "Veuillez saisir le nombre de chiffres impairs, ce nombre doit être strictement supérieur à 0"
+	Saisir N
+	TantQue N <= 0 
+		Afficher "Erreur de saisie, recommencer"
+		Saisir N
+	FTantQue
+
+	nombre <- 1
+
+	Pour I allant de 1 à N
+		tab[I] <- nombre * nombre
+		nombre <- nombre + 2
+	FPour
+	
+	Pour I allant de 1 à N
+		Afficher tab[I], "a pour valeur ", tab[I] * tab[I]		
+	FPour
+
+FIN
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exercice 3 : Codage
+
+Algorithme "Codage"
+
+Variables : indicées : alphabet[26] d'éléments CC
+	    numériques : I, ind, clef, nb, taillemot
+	    CC : mot, motcoder, extract 
+
+Début
+
+	Afficher "Saisissez votre mot"
+	Saisir mot
+	Afficher "Saisissez votre clef"
+	Saisir clef
+
+TantQue clef > 5
+	Afficher "Erreur de saisie, veuillez recommencer"
+	Saisir clef
+FTantQue
+
+	taillemot <- longueur(mot)
+
+	nb <- 1
+
+TantQue nb < taillemot
+	extract <- (mot, nb, 1)
+	Pour I allant de 1 à 26
+		Si alphabet[I] = extract Alors ind <- I
+	FPour
+	
+	ind <- ind + clef
+	Si ind > 26 Alors ind <- ind - 26
+	FSI
+	
+	motcoder <- alphabet[ind]
+	nb <- nb + 1
+FTantQue
+
+Afficher "Le mot codé est", motcoder
+
+FIN
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exercice 4
+
+Algorithme"Gestion des ligues"
+Variables indicées : Evenements [7, 12] d'éléments numériques et est pré-remplie
+                     EveMax [12] d'éléments numériques
+
+Variables : Numérique = Choix, TotalEv
+
+
+Début
+(* Affichage du menu *)
+   Afficher" Voici le menu de l'application"
+   Affichez "Tapez 1 pour connaitre le nombre total d'évènements toutes ligues confondues"
+   Affichez "Tapez 2 pour connaitre le nombre total d'évènements ligue par ligue"
+   Affichez "Tapez 3 pour connaitre le nombre maximum d'évènements de chaque ligue"
+(* Faire choisir l'utilisateur*)
+   Afficher " Quel est votre choix ?"
+   Saisir Choix
+(* Traitement*)
+   Selon (Choix)
+      Cas 1 : Total <-- Cumul (Evenements, 7, 12)
+              Afficher " Le nombre total d'évènements organisés par les ligues est de ", Total
+      Cas 2 : Procédure CumulParLigue ( Evenements, 7, 12)
+      Cas 3 : Procédure EvenementMax(Evenements, 7,12)
+      Défaut : Afficher " Mauvais choix donc pas de traitement"
+  Fin Selon
+Fin
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fonction Cumul (Evenements composée de numérique,  Entier L, Entier C) : Numérique
+Variables : numérique = Retour, NbL, NbC
+Début
+
+Retour <-- 0
+Pour NbL allant de 1 à L
+     Pour NbC allant de 1 à C
+         Retour <-- Retour + Evenements[NbL, NbC]
+     FPour
+FPour
+Retourner Retour
+Fin
+
+-----------------------
+
+Procédure CumulParLigue ( Evenements composée de numérique, Entier L, Entier C)
+Variables : Numérique = TotalLigue, NbL, NbC
+Début
+TotalLigue <-- 0
+Pour NbL allant de 1 à L
+     TotalLigue <-- 0
+     Pour NbC allant de 1 à C
+         TotalLigue <-- TotalLigue + Evenements[NbL, NbC]
+     FPour
+     Afficher"La ligue portant le N°", NbL, " a organisé ", TotalLigue, " évènements"
+FPour
+
+Fin
+
+-----------------------
+
+Procédure EvenementMax (Evenements composée de numérique, Entier L, Entier C)
+Variables : Numérique = Max, NbL, NbC, I
+Variable indicée : EveMax[12] d'éléments numériques 
+Début
+(* Initialisation du vecteur EveMax*)
+Pour I allant de 1 à 12
+   EveMax[I] <-- 0
+FPour
+
+(*Traitement*)
+I <-- 1
+Pour NbL allant de 1 à L
+     Max <-- Evenements [NbL,1]
+     Pour NbC allant de 2 à C
+        Si Evenements [NbL,NbC] > Max Alors Max <-- Evenements [NbL,NbC]
+        Fsi
+     FPour
+     EveMax[I] <-- Max 
+     I <-- I +1
+FPour
+
+(* Affichage  du vecteur EveMax*)
+Pour I allant de 1 à 12
+  Afficher  EveMax[I] 
+FPour
+  
+Fin   
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exercice 5
+
+Algorithme "Libraire"
+Variables : Nbex, Nbétoile, Plivre en entier
+	    Machat, Mréduc, Port, Pap en float
+	    CC : Type
+Début
+  Afficher "Saisir le nombre d'exemplaires"
+  Saisir Nbex
+  Afficher "Saisir le nombre d'étoiles, compris entre 1 et 3"
+  Saisir Nbétoile
+  Tant que (Nbétoile<1) ou (Nbétoile>3)
+    Afficher "Recommencez. Saisissez 1,2 ou 3"
+    Saisir Nbétoile
+  FinTantque
+  Afficher "Quel est le type de vente ? M pour magasin, C pour en correspondance"
+  Saisir Type
+  Tant que (Type=!C) et (Type=!M)
+    Afficher "Recommencez. C'est bien M ou C qu'il faut saisir"
+    Saisir Type
+  FinTantque
+  Si Nbétoile==1 Alors Plivre <- 18
+                 Sinon Si Nbétoile==2 Alors Plivre<-24
+                                      Sinon Plivre<-29
+  FSi
+  Machat <- Nbex*Plivre
+  Si Nbex>=20 Alors Mréduc <- Machat*0.1
+              Sinon Mréduc <- 0 
+  FSi
+  Si (Type=="C") et (Machat<200) Alors Port <- Machat*0.02
+                                 Sinon Port <- 0
+  FSi
+  Afficher "Le montant de l'achat:",Machat," euros"
+  Afficher "Le montant de la réduction :",Mréduc," euros"
+  Afficher "Le montant des frais de port:",Port," euros"
+  Pap <- Machat-Mréduc+Port
+  Afficher "Le prix à payer:",Pap," euros"
+Fin
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

@@ -1,0 +1,27 @@
+1. PUT, PATCH, DELETE | Les plus utilisées GET et POST
+
+2. GET 
+
+3. POST
+
+4. form, method, action
+
+On a besoin de la balise NAME pour récupere en PHP ou NODEJS des informations
+
+Le routage = le processus qui permet d'associer une URL à du code applicatif
+
+
+
+Question 3.5 question de recherche
+
+1. L'installation à été effectuer dans le répertoire node_modules
+
+2. L'installation à été effectuer dans le fichier de configuration Package.json
+
+3. Une dépendance est un logiciel dont votre application a besoin pour fonctionner, comme une bibliothèque ou un plug-in
+
+4.Nan on à pas besoin car on a le fichier package.json qui nous permet de les réinstaller
+
+5. on doit utiliser git clone "lien du fichier git"
+
+6. La librairie express sert pour la création d'API (interface de programmation d'applications) et de applications mobiles

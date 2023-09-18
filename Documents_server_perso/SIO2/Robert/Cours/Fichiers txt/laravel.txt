@@ -1,0 +1,35 @@
+Laravel
+
+	Globale - Création projet - Configuration 
+
+	Modèle :
+	       | routage : mécanisme par lequel les requêtes sont spécifiés
+	       | par une URL et une méthode (verbe HTTP)
+
+		 sont divisées (routées) vers le code qui les traite
+
+
+I. Create database SQL |DDL >80%
+		       |DML >50% 
+		       |DLL ~ 0%
+		       |DTL ~ 0%
+
+II. Créer le squelette du projet
+
+composer  create-project laravel/laravel test --prefer-dist
+? (gestion paquet 
+  & dépendance)
+
+ORM : Bibliothèque logicielle
+
+object : constance d'une chose alimentée par : formulaire, csv, api
+
+relationnel : bdd, tables
+
+mapping
+
+
+
+
+
+
